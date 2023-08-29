@@ -23,4 +23,5 @@ model Messages {
   message String
   user    User   @relation(fields: [userId], references: [id])
   userId  String
+  data    DateTime
 }

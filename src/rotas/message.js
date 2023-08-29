@@ -12,6 +12,7 @@ export async function message(request, reply) {
     const newMessage = await prisma.messages.create({
       data: {
         message,
+        data: new Date(),
         user: {
           connect: { id: request.user.id },
         },
